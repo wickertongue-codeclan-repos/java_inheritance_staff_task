@@ -23,8 +23,21 @@ public abstract class Employee {
         return this.salary;
     }
 
-    public void raiseSalary(double increaseBy) {
-        this.salary += increaseBy;
+    public void updateName(String name) {
+        if (name != null) {
+            this.name = name;
+        }
+    }
+
+    public String raiseSalary(double increaseBy) {
+        String message = null;
+        if (increaseBy < 0) {
+            message = "Invalid input, please input a positive number.";
+        } else {
+            this.salary += increaseBy;
+            message = "Salary has been increased by" + increaseBy + ". New salary equals " + getSalary();
+        }
+        return message;
     }
 
     public double payBonus() {

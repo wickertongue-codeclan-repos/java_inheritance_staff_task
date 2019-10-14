@@ -12,4 +12,8 @@ public class Director extends Manager {
         return this.budget;
     }
 
+    public double payBonus() {
+        return super.payBonus() * 2;
+    }
+
 }

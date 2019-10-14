@@ -39,4 +39,10 @@ public class DatabaseAdminTest {
         assertEquals("HU34 623 978", databaseAdmin.getNin());
     }
 
+    @Test
+    public void canChangeName() {
+        databaseAdmin.updateName("Johnny");
+        assertEquals("Johnny", databaseAdmin.getName());
+    }
+
 }

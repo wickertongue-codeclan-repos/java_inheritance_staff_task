@@ -38,4 +38,10 @@ public class DeveloperTest {
         assertEquals("JE23 254 765", developer.getNin());
     }
 
+    @Test
+    public void canChangeName() {
+        developer.updateName("Johnny");
+        assertEquals("Johnny", developer.getName());
+    }
+
 }
